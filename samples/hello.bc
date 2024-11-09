@@ -1,0 +1,16 @@
+source file: /workspaces/klang/samples/hello.kl
+function(top), 2 registers
+5 instructions:
+(   0,    0) [000] ADJUSTARGS     |                     | 
+(   0,    5) [001] LOADGLOBAL     |    0    0           | print
+(   6,   20) [002] LOADC          |    1    1           | "hello world!"
+(   0,   20) [003] SCALL          |    0    1    0      | 1 arguments, 0 results
+(  21,   21) [004] RETURN0        |                     | 
+
+2 constants:
+constant    0: "print"
+constant    1: "hello world!"
+
+0 references:
+
+0 sub-function

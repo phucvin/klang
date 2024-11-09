@@ -1,0 +1,15 @@
+source file: /workspaces/klang/test01/t01.kl
+function(top), 2 registers
+5 instructions:
+(   0,    0) [000] ADJUSTARGS     |                     | 
+(   0,    5) [001] LOADGLOBAL     |    0    0           | print
+(   6,   11) [002] LOADI          |    1    7           | 7
+(   0,   12) [003] SCALL          |    0    1    0      | 1 arguments, 0 results
+(  13,   13) [004] RETURN0        |                     | 
+
+1 constants:
+constant    0: "print"
+
+0 references:
+
+0 sub-function

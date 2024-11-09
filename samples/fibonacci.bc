@@ -1,0 +1,44 @@
+source file: /workspaces/klang/samples/fibonacci.kl
+function(top), 4 registers
+11 instructions:
+(   0,    0) [000] ADJUSTARGS     |                     | 
+(   8,   48) [001] MKCLOSURE      |    0    0           | 
+(  50,   55) [002] LOADGLOBAL     |    1    0           | print
+(  79,   80) [003] MOVE           |    2    0           | 
+(  81,   83) [004] LOADI          |    3   40           | 40
+(  79,   83) [005] SCALL          |    2    1    1      | 1 arguments, 1 results
+(  57,   75) [006] LOADC          |    3    1           | "fibonacci(40) = "
+(  56,   84) [007] CONCAT         |    2    3    2      | 
+(  50,   84) [008] SCALL          |    1    1    0      | 1 arguments, 0 results
+(  86,   86) [009] CLOSEJMP       |    0    0           | close from 0 then jump to 10
+(  86,   86) [010] RETURN0        |                     | 
+
+2 constants:
+constant    0: "print"
+constant    1: "fibonacci(40) = "
+
+0 references:
+
+1 sub-functions:
+
+function(top:0), 4 registers
+12 instructions:
+(  13,   19) [000] LEI            |    0    1           | 1
+(  13,   19) [001] CONDJMP        |    0    2           | jump to 4 if false
+(  24,   25) [002] TESTSET        |    1    0           | 
+(  24,   25) [003] CONDJMP        |    1    7           | set R1 = R0 and jump to 11 if true
+(  29,   30) [004] LOADREF        |    1    0           | 
+(  31,   36) [005] SUBI           |    2    0    1      | 1
+(  29,   37) [006] SCALL          |    1    1    1      | 1 arguments, 1 results
+(  40,   41) [007] LOADREF        |    2    0           | 
+(  42,   47) [008] SUBI           |    3    0    2      | 2
+(  40,   48) [009] SCALL          |    2    1    1      | 1 arguments, 1 results
+(  29,   48) [010] ADD            |    1    1    2      | 
+(  13,   48) [011] RETURN1        |    1                | 
+
+0 constants:
+
+1 references:
+reference    0: from      stack, index = 0
+
+0 sub-function
